@@ -1,5 +1,7 @@
 # gatepy
 
+[![ForTheBadge built-by-developers](http://ForTheBadge.com/images/badges/built-by-developers.svg)](https://GitHub.com/MrNereof/)
+
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![PyPI license](https://img.shields.io/pypi/l/gatepy.svg)](https://pypi.python.org/pypi/gatepy/)
 [![PyPI version fury.io](https://badge.fury.io/py/gatepy.svg)](https://pypi.python.org/pypi/gatepy/)
