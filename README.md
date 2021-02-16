@@ -1,5 +1,10 @@
 # gatepy
 
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![PyPI license](https://img.shields.io/pypi/l/gatepy.svg)](https://pypi.python.org/pypi/gatepy/)
+[![PyPI version shields.io](https://img.shields.io/pypi/v/gatepy.svg)](https://pypi.python.org/pypi/gatepy/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/gatepy.svg)](https://pypi.python.org/pypi/gatepy/)
+
 **gatepy** is a Python implementation of a logical gate.
 
 ## Installation
