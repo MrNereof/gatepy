@@ -1,32 +1,88 @@
-def NOT(a):
+def NOT(a: bool) -> bool:
+    """NOT logical gate
+    
+    Args:
+        a (bool): First input signal
+    
+    Returns:
+        bool: Output signal
+    """
     return not a
 
-def OR(a,b):
-    return a or b
+
+def OR(a: bool, b: bool) -> bool:
+    """OR logical gate
     
-def AND(a,b):
+    Args:
+        a (bool): First input signal
+        b (bool): Second input signal
+    
+    Returns:
+        bool: Output signal
+    """
+    return a or b
+
+
+def AND(a: bool, b: bool) -> bool:
+    """AND logical gate
+    
+    Args:
+        a (bool): First input signal
+        b (bool): Second input signal
+    
+    Returns:
+        bool: Output signal
+    """
     return a and b
 
-def NAND(a,b):
-    return NOT(AND(a,b))
 
-def NOR(a,b):
-    return NOT(OR(a,b))
+def NAND(a: bool, b: bool) -> bool:
+    """NAND logical gate
+    
+    Args:
+        a (bool): First input signal
+        b (bool): Second input signal
+    
+    Returns:
+        bool: Output signal
+    """
+    return NOT(AND(a, b))
 
-def XOR(a,b):
-    return OR(AND(NOT(a),b),AND(a,NOT(b)))
 
-def XNOR(a,b):
-    return NOT(XOR)
+def NOR(a: bool, b: bool) -> bool:
+    """NOR logical gate
+    
+    Args:
+        a (bool): First input signal
+        b (bool): Second input signal
+    
+    Returns:
+        bool: Output signal
+    """
+    return NOT(OR(a, b))
 
-def tobool(a):
-    if a == 1 or a == '1':
-        return True
-    elif a == 0 or a == '0':
-        return False
 
-def toint(a):
-    if a == True:
-        return 1
-    elif a == False:
-        return 0
+def XOR(a: bool, b: bool) -> bool:
+    """XOR logical gate
+    
+    Args:
+        a (bool): First input signal
+        b (bool): Second input signal
+    
+    Returns:
+        bool: Output signal
+    """
+    return OR(AND(NOT(a), b), AND(a, NOT(b)))
+
+
+def XNOR(a: bool, b: bool) -> bool:
+    """XNOR logical gate
+    
+    Args:
+        a (bool): First input signal
+        b (bool): Second input signal
+    
+    Returns:
+        bool: Output signal
+    """
+    return NOT(XOR(a, b))

@@ -22,18 +22,30 @@ Done.
 ```python
 import gatepy
 
-def adder(a,b):
-    c = '0'
-    a = list(format(a, '016b'))[::-1]
-    b = list(format(b, '016b'))[::-1]
-    out = []
-    for i in range(16):
-        S = gatepy.toint(gatepy.XOR(gatepy.XOR(gatepy.tobool(a[i]), gatepy.tobool(b[i])), gatepy.tobool(c)))
-        c = gatepy.OR(gatepy.AND(gatepy.XOR(gatepy.tobool(a[i]), gatepy.tobool(b[i])), gatepy.tobool(c)),gatepy.AND(gatepy.tobool(a[i]),gatepy.tobool(b[i])))
-        out.append(str(S))
-    return int(''.join(out[::-1]), 2)
 
-print(adder(1,2))
+def adder(a, b):
+    c = False
+    a = list(format(a, "064b"))[::-1]
+    b = list(format(b, "064b"))[::-1]
+    out = []
+    for i in range(64):
+        S = int(
+            gatepy.XOR(
+                gatepy.XOR(int(a[i]), int(b[i])), c
+            )
+        )
+        c = gatepy.OR(
+            gatepy.AND(
+                gatepy.XOR(int(a[i]), int(b[i])), c
+            ),
+            gatepy.AND(int(a[i]), int(b[i])),
+        )
+        out.append(str(S))
+    return int("".join(out[::-1]), 2)
+
+
+print(adder(1, 2))
+
 ```
 
 Return:

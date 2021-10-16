@@ -5,7 +5,7 @@ with open('README.md', encoding="utf8") as f:
 
 setuptools.setup(
     name='gatepy',
-    version='1.0.1',
+    version='1.0.2',
     description='',
     long_description=readme,
     long_description_content_type="text/markdown",
